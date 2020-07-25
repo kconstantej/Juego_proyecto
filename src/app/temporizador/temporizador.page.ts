@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { isUndefined } from 'util';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-temporizador',
+  templateUrl: './temporizador.page.html',
+  styleUrls: ['./temporizador.page.scss'],
 })
-export class HomePage {
+export class TemporizadorPage implements OnInit {
+
   temas={
     imagen_fondo: '',
    
@@ -33,6 +33,9 @@ export class HomePage {
     
       
     }
+  }
+
+  ngOnInit() {
   }
 
 }

@@ -27,18 +27,34 @@ export class AppComponent {
       redirectTo: '/acerca'
     }
   ];
+  temas={
+    imagen_fondo: '',
+   
+  };
+  
+  imagen_base:string;
+
   constructor(
+    
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    
+    
   ) {
+    localStorage.setItem("fondo","");
     this.initializeApp();
+    
+    
   }
+  
 
+  
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      
     });
   }
 }

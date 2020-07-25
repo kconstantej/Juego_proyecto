@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'acerca',
+    loadChildren: () => import('./acerca/acerca.module').then( m => m.AcercaPageModule)
+  },
+  {
+    path: 'objetivos',
+    loadChildren: () => import('./objetivos/objetivos.module').then( m => m.ObjetivosPageModule)
+  },
+  {
+    path: 'configuraciones',
+    loadChildren: () => import('./configuraciones/configuraciones.module').then( m => m.ConfiguracionesPageModule)
+  },
+  {
+    path: 'temporizador',
+    loadChildren: () => import('./temporizador/temporizador.module').then( m => m.TemporizadorPageModule)
+  },
+  {
+    path: 'temas',
+    loadChildren: () => import('./temas/temas.module').then( m => m.TemasPageModule)
+  },
+  {
+    path: 'estilos',
+    loadChildren: () => import('./estilos/estilos.module').then( m => m.EstilosPageModule)
+  },
 ];
 
 @NgModule({
