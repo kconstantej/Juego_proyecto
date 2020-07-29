@@ -34,7 +34,11 @@ const routes: Routes = [
   {
     path: 'estilos',
     loadChildren: () => import('./estilos/estilos.module').then( m => m.EstilosPageModule)
+  },  {
+    path: 'opcioncard',
+    loadChildren: () => import('./opcioncard/opcioncard.module').then( m => m.OpcioncardPageModule)
   },
+
 ];
 
 @NgModule({
