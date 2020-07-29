@@ -1,0 +1,62 @@
+{ "rojo":[
+	{
+	  "_id": "5f20b846b7fe3ab49985a641",
+	  "resp": [
+		"Pastaza",
+		"Loja",
+		"Tungurahua",
+		"Manabi",
+		"Chimborazo"
+	  ],
+	  "correct":"Chimborazo",
+	  "question": "LA PROVINCIA DE LAS ALTAS CUMBRES"
+	},
+	{
+	  "_id": "5f20b8464d0f74cc60",
+	  "resp": [
+		"Mejia",
+		"Puerto Quito",
+		"Ibarra",
+		"Quito"
+	  ],
+	  "correct":"Quito",
+	  "question": "CIUDAD QUE ESTA EN LA “MITAD DEL MUNDO"
+	},
+	{
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Cuenca",
+		  "Riobamba",
+		  "Ambato",
+		  "Quito"
+		],
+		"correct":"Quito",
+		"question": "A QUE CIUDAD SE LE DICE 'EL ALMA DEL MUNDOS' "
+	  }
+  ],
+  "amarillo":[
+	{
+		"_id": "5f20b846b7fe3ab49985a641",
+		"resp": [
+		  "Pastaza",
+		  "Loja",
+		  "Tungurahua",
+		  "Manabi",
+		  "Chimborazo"
+		],
+		"correct":"Chimborazo",
+		"question": "LA PROVINCIA DE LAS ALTAS CUMBRES"
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a85d7c",
+		"resp": [
+		  "Mejia",
+		  "Puerto Quito",
+		  "Ibarra",
+		  "Quito"
+		],
+		"correct":"Quito",
+		"question": "CIUDAD QUE ESTA EN LA “MITAD DEL MUNDO"
+	  }
+  ]
+}
