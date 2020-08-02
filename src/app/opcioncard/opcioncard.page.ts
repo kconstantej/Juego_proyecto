@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CardsDBService } from '../services/cards-db.service';
 import { Rojo } from '../interfaces/interfaces';
+import { DataLocalService } from '../services/data-local.service';
 
 @Component({
   selector: 'app-opcioncard',
@@ -15,14 +15,15 @@ export class OpcioncardPage implements OnInit {
   title: string;
   ans;
 
-  constructor( private cardsdb: CardsDBService ) { }
+  constructor( private datalocal: DataLocalService ) { }
 
   ngOnInit() {
-    this.cardsdb.getQuestion()
-    .subscribe( resp => {
-      this.cards.push( ...resp.rojo );
-      const randomNum = Math.trunc(Math.random() * (this.cards.length - 0) + 0);
-      this.azarCard = this.cards[randomNum];
+    this.datalocal.firstTime();
+    this.datalocal.getCardsColor('Rojas')
+    .then( resp => {
+      console.log(resp);
+      const randomNum = Math.trunc(Math.random() * (resp.length - 0) + 0);
+      this.azarCard = resp[randomNum];
       this.resp = this.azarCard.resp;
       this.title = this.azarCard.question;
     });
@@ -35,5 +36,4 @@ export class OpcioncardPage implements OnInit {
       console.log(false);
     }
   }
-
 }
