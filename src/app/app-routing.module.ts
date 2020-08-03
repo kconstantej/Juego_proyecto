@@ -59,6 +59,18 @@ const routes: Routes = [
     path: 'morada',
     loadChildren: () => import('./morada/morada.module').then( m => m.MoradaPageModule)
   },
+  {
+    path: 'opcioncard',
+    loadChildren: () => import('./opcioncard/opcioncard.module').then( m => m.OpcioncardPageModule)
+  },
+  {
+    path: 'dibujocard',
+    loadChildren: () => import('./dibujocard/dibujocard.module').then( m => m.DibujocardPageModule)
+  },
+  {
+    path: 'actuacard',
+    loadChildren: () => import('./actuacard/actuacard.module').then( m => m.ActuacardPageModule)
+  },
 
 ];
 
