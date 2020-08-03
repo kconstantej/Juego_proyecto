@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-objetivos',
@@ -15,10 +16,15 @@ export class ObjetivosPage implements OnInit {
   imagen_base:string;
   
   
-  constructor() {
+  constructor(private storage: Storage) {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
-    console.log('home',this.imagen_base)
+    console.log('home',this.imagen_base);
+    storage.set('temporizador', '60');
+    storage.get('temporizador').then((val) => {
+      console.log('Your age is:', val);
+    });
+    
     
     
   }

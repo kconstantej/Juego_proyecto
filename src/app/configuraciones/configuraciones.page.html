@@ -1,5 +1,6 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header traslucent="true">
+  
+  <ion-toolbar >
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -7,11 +8,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [class]="imagen_base">
+<ion-content [class]="imagen_base" fullscreen="true">
+  
+  
   <div class="botones_configuracion">
-    <ion-button class="botones_configuracion" slot="start" expand="full" routerLink="/temporizador">TEMPORIZADOR</ion-button>
-    <ion-button class="botones_configuracion" expand="full" routerLink="/temas">TEMAS</ion-button>
-  <ion-button class="botones_configuracion" expand="full" routerLink="/estilos">ESTILOS</ion-button> 
+    <ion-button class="botones_configuracion" shape="round"  slot="start" expand="full" routerLink="/temporizador">TEMPORIZADOR</ion-button>
+    <ion-button class="botones_configuracion" shape="round" expand="full" routerLink="/temas">TEMAS</ion-button>
+  <ion-button class="botones_configuracion" shape="round" expand="full" routerLink="/estilos">ESTILOS</ion-button> 
   </div>
   
   

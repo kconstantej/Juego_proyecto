@@ -1,5 +1,7 @@
 {
   "name": "cranium_criollo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { isUndefined } from 'util';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,7 @@ import { isUndefined } from 'util';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  //desde aqui
   temas={
     imagen_fondo: '',
    
@@ -15,11 +17,11 @@ export class HomePage {
   imagen_base:string;
   
   
-  constructor() {
+  constructor(private storage: Storage) {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
-    console.log('home',this.imagen_base)
-    
+   
+    storage.set('temporizador', 60);
     
   }
   validar_fondo(fondo){
@@ -27,12 +29,13 @@ export class HomePage {
     if(fondo===''){
       this.imagen_base= 'backgroundClaro';
       localStorage.setItem('fondo',this.imagen_base);
-      console.log("casaaaaaaaaaaaa",this.imagen_base);
+      
     }else{
       this.imagen_base=localStorage.getItem('fondo');
     
       
     }
   }
+  //hasta aqui
 
 }

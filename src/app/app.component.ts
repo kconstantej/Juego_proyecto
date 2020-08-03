@@ -43,6 +43,7 @@ export class AppComponent {
     
   ) {
     localStorage.setItem("fondo","");
+    
     this.initializeApp();
     
     

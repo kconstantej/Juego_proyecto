@@ -8,7 +8,11 @@ import { TemporizadorPageRoutingModule } from './temporizador-routing.module';
 
 import { TemporizadorPage } from './temporizador.page';
 
+
+
+
 @NgModule({
+  
   imports: [
     CommonModule,
     FormsModule,
