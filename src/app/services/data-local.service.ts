@@ -26,7 +26,7 @@ export class DataLocalService {
     });
     this.storage.set('Rojas', this.cardsR);
     this.storage.set('Verdes', this.cardsG);
-+6
+
 +
 +    this.storage.set('Azules', this.cardsB);
   }

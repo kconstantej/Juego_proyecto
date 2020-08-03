@@ -9,7 +9,7 @@ export class RelojComponent implements OnInit {
   timer: number;
 
   time :BehaviorSubject<string>=new BehaviorSubject('00:00');
-  iniciaren =1   ;
+  iniciaren =1 ;
   constructor() {
    }
   iniciar(duracion:number){
