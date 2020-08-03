@@ -34,29 +34,28 @@
 		"question": "A QUE CIUDAD SE LE DICE 'EL ALMA DEL MUNDOS' "
 	  }
   ],
-  "amarillo":[
-	{
+  "verde":[
+	  {
 		"_id": "5f20b846b7fe3ab49985a641",
-		"resp": [
-		  "Pastaza",
-		  "Loja",
-		  "Tungurahua",
-		  "Manabi",
-		  "Chimborazo"
-		],
-		"correct":"Chimborazo",
-		"question": "LA PROVINCIA DE LAS ALTAS CUMBRES"
+		"pista": "Cerro ubicado el latacunga",
+		"correct":"Volcan Cotopaxi"
 	  },
 	  {
-		"_id": "5f20b8464d0f74cc60a85d7c",
-		"resp": [
-		  "Mejia",
-		  "Puerto Quito",
-		  "Ibarra",
-		  "Quito"
-		],
-		"correct":"Quito",
-		"question": "CIUDAD QUE ESTA EN LA “MITAD DEL MUNDO"
+		"_id": "5f20b846b7fe3ab49985a641",
+		"pista": "Cerro ubicado el quito",
+		"correct":"Volcan Sangay"
 	  }
-  ]
+  ],
+  "azul":[
+	{
+	  "_id": "5f20b846b7fe3ab49985a641",
+	  "pista": "Como un expresidente patojo",
+	  "correct":"Lenin Moreno"
+	},
+	{
+	  "_id": "5f20b846b7fe3ab49985a641",
+	  "pista": "Como un Vice",
+	  "correct":"Jorge Glass"
+	}
+]
 }
