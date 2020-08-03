@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { isUndefined } from 'util';
+import { DataLocalService } from '../services/data-local.service';
 
 @Component({
   selector: 'app-home',
@@ -15,12 +16,11 @@ export class HomePage {
   imagen_base:string;
   
   
-  constructor() {
+  constructor( private datalocal: DataLocalService ) {
+    this.datalocal.firstTime();
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
     console.log('home',this.imagen_base)
-    
-    
   }
   validar_fondo(fondo){
     

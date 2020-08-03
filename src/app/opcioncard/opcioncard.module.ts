@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { OpcioncardPageRoutingModule } from './opcioncard-routing.module';
 
 import { OpcioncardPage } from './opcioncard.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OpcioncardPageRoutingModule
+    OpcioncardPageRoutingModule,ComponentsModule
   ],
   declarations: [OpcioncardPage]
 })

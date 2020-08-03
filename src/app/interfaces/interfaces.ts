@@ -1,6 +1,13 @@
 export interface RespuestaCards {
   rojo: Rojo[];
-  amarillo: Rojo[];
+  verde: Verde[];
+  azul: Verde[];
+}
+
+export interface Verde {
+  _id: string;
+  pista: string;
+  correct: string;
 }
 
 export interface Rojo {
