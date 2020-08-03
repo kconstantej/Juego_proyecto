@@ -40,6 +40,10 @@ const routes: Routes = [
     loadChildren: () => import('./opcioncard/opcioncard.module').then( m => m.OpcioncardPageModule)
   },
   {
+    path: 'equipos',
+    loadChildren: () => import('./equipos/equipos.module').then( m => m.EquiposPageModule)
+  },
+  {
     path: 'equipo-random/:id',
     loadChildren: () => import('./equipo-random/equipo-random.module').then( m => m.EquipoRandomPageModule)
   },
