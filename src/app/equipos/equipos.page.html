@@ -1,0 +1,39 @@
+
+<ion-content  [class]="imagen_base"  >
+  <ion-grid fixed>
+    <ion-row size= "10" fixed>
+      <ion-col size= "6" >
+        <div>
+          <ion-card fullscreen>
+            <ion-img src="./assets/img/carla.png"></ion-img>
+            <ion-item>
+              <ion-label>Equipo 1</ion-label>
+            </ion-item>
+          
+            <ion-card-content>
+              <ion-input type='text' [(ngModel)]="informacion.nombre_equipo1" name='equipo1' placeholder="Nombre Equipo"></ion-input>
+            </ion-card-content>
+          </ion-card> 
+        </div>
+      </ion-col>
+      <ion-col  size= "6" >
+        <div>
+          <ion-card fullscreen>
+            <ion-img src="./assets/img/carla.png"></ion-img>
+            <ion-item>
+              <ion-label>Equipo 2</ion-label>
+            </ion-item>
+          
+            <ion-card-content>
+              <ion-input type='text' [(ngModel)]="informacion.nombre_equipo2" name='equipo2' placeholder="Nombre Equipo"></ion-input>
+            </ion-card-content>
+          </ion-card> 
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<section style="text-align:center">
+
+  <ion-button color="success" type='submit' (click)="registroDatos()">Comenzar</ion-button>
+</section>
+</ion-content>

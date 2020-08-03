@@ -1,0 +1,61 @@
+{ "rojo":[
+	{
+	  "_id": "5f20b846b7fe3ab49985a641",
+	  "resp": [
+		"Pastaza",
+		"Loja",
+		"Tungurahua",
+		"Manabi",
+		"Chimborazo"
+	  ],
+	  "correct":"Chimborazo",
+	  "question": "LA PROVINCIA DE LAS ALTAS CUMBRES"
+	},
+	{
+	  "_id": "5f20b8464d0f74cc60",
+	  "resp": [
+		"Mejia",
+		"Puerto Quito",
+		"Ibarra",
+		"Quito"
+	  ],
+	  "correct":"Quito",
+	  "question": "CIUDAD QUE ESTA EN LA “MITAD DEL MUNDO"
+	},
+	{
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Cuenca",
+		  "Riobamba",
+		  "Ambato",
+		  "Quito"
+		],
+		"correct":"Quito",
+		"question": "A QUE CIUDAD SE LE DICE 'EL ALMA DEL MUNDOS' "
+	  }
+  ],
+  "verde":[
+	  {
+		"_id": "5f20b846b7fe3ab49985a641",
+		"pista": "Cerro ubicado el latacunga",
+		"correct":"Volcan Cotopaxi"
+	  },
+	  {
+		"_id": "5f20b846b7fe3ab49985a641",
+		"pista": "Cerro ubicado el quito",
+		"correct":"Volcan Sangay"
+	  }
+  ],
+  "azul":[
+	{
+	  "_id": "5f20b846b7fe3ab49985a641",
+	  "pista": "Como un expresidente patojo",
+	  "correct":"Lenin Moreno"
+	},
+	{
+	  "_id": "5f20b846b7fe3ab49985a641",
+	  "pista": "Como un Vice",
+	  "correct":"Jorge Glass"
+	}
+]
+}
