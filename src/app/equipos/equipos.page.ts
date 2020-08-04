@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { DataLocalService } from '../services/data-local.service';
 
 @Component({
   selector: 'app-equipos',
@@ -21,7 +22,7 @@ export class EquiposPage implements OnInit {
   imagen_base:string;
   
 
-  constructor(private router: Router,private navCtrl:NavController) {
+  constructor(private router: Router,private navCtrl:NavController, private datalocal: DataLocalService) {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
     console.log('home',this.imagen_base)
@@ -41,17 +42,20 @@ export class EquiposPage implements OnInit {
     }
   }
 
-  registroDatos() {
+  async registroDatos() {
     console.log(this.informacion);
     let rd = Math.floor(Math.random()*((2-1)+1))+1;
     console.log(rd);
+    await this.datalocal.equipo(this.informacion.nombre_equipo1, rd);
     if(rd==1){
       this.router.navigate(['/equipo-random',this.informacion.nombre_equipo1])
+     
       console.log(this.informacion.nombre_equipo1);
+      
     }
     if(rd==2){
       this.router.navigate(['/equipo-random',this.informacion.nombre_equipo2])
-      console.log(this.informacion.nombre_equipo2);
+      
     }
   }
 
@@ -59,3 +63,4 @@ export class EquiposPage implements OnInit {
   }
 
 }
+
