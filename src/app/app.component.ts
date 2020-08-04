@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -39,13 +40,14 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
+    private storage: Storage
     
     
   ) {
     localStorage.setItem("fondo","");
     
     this.initializeApp();
-    
+    this.storage.set('temporizador', 1);
     
   }
   

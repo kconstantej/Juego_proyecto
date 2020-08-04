@@ -51,7 +51,7 @@ ion-button.boton_jugar_pantalla_principal{
     margin-top: 30%;
     margin-right: 10%;
     margin-left: 10%;
-    color: blue;
+   
     border-radius: 80%;
     
 }
@@ -77,6 +77,8 @@ ion-button.botones_configuracion{
 
 ion-item.item_desarroladores{
     opacity: 0.7;
+    margin: 10%;
+    align-items: center;
 }
 
 ion-list.radio_buton_temporizador{

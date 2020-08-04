@@ -16,13 +16,13 @@ export class ConfiguracionesPage implements OnInit {
   constructor() {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
-    console.log('+++++++',this.imagen_base)
+    //console.log('+++++++',this.imagen_base)
 
    }
    validar_fondo(fondo){
     
     if(fondo===''){
-      console.log('casaaaaaaaaaaaa',fondo,'---------');
+      //console.log('casaaaaaaaaaaaa',fondo,'---------');
       localStorage.setItem('fondo','backgroundClaro');
       this.imagen_base= localStorage.getItem('fondo');
     }else{

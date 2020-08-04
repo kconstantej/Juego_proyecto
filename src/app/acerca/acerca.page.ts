@@ -54,7 +54,7 @@ export class AcercaPage implements OnInit {
   constructor(public alertCtr: AlertController) {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
-    console.log('home',this.imagen_base)
+    //console.log('home',this.imagen_base)
     
     
   }
@@ -63,7 +63,7 @@ export class AcercaPage implements OnInit {
     if(fondo===''){
       this.imagen_base= 'backgroundClaro';
       localStorage.setItem('fondo',this.imagen_base);
-      console.log("casaaaaaaaaaaaa",this.imagen_base);
+      //console.log("casaaaaaaaaaaaa",this.imagen_base);
     }else{
       this.imagen_base=localStorage.getItem('fondo');
     

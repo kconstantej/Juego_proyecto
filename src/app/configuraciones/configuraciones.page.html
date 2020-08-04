@@ -1,15 +1,15 @@
-<ion-header traslucent="true">
-  
-  <ion-toolbar >
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>CONFIGURACIONES</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [class]="imagen_base" fullscreen="true">
-  
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back-outline" routerLink="/"></ion-icon>
+    </ion-buttons>
+    <div class="titulo">
+      <h1>CONFIGURACIONES</h1>
+    </div>
+    
+  </ion-toolbar>
   
   <div class="botones_configuracion">
     <ion-button class="botones_configuracion" shape="round"  slot="start" expand="full" routerLink="/temporizador">TEMPORIZADOR</ion-button>
