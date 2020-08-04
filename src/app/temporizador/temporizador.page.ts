@@ -74,8 +74,5 @@ export class TemporizadorPage implements OnInit {
     await this.presentAlert();
     this.router.navigate(['/configuraciones']);
 
-    
   }
-
-
 }

@@ -1,18 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-icon name="arrow-back-outline" (click)="routingViaAngular()" tab="home" expand="full" slot="start"></ion-icon>
-     
-    </ion-buttons>
-    
-    <ion-title>TEMAS</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [class]="imagen_base">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back-outline" routerLink="/"></ion-icon>
+    </ion-buttons>
+    <div class="titulo">
+      <h1>TEMAS</h1>
+    </div>
+    
+  </ion-toolbar>
   <div class="botones_configuracion">
-    <ion-button class="botones_configuracion" expand="full" (click)='oscuro()'>OSCURO</ion-button>
-  <ion-button class="botones_configuracion" expand="full"(click)='claro()' >CLARO</ion-button> 
+    <ion-button class="botones_configuracion" shape="round" expand="full" (click)='oscuro()'>OSCURO</ion-button>
+  <ion-button class="botones_configuracion" shape="round" expand="full"(click)='claro()' >CLARO</ion-button> 
   </div>
   
   

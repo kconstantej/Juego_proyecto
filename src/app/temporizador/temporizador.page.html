@@ -8,7 +8,13 @@
 </ion-header>
 
 <ion-content [class]="imagen_base">
-  <ion-title >TEMPORIZADOR</ion-title>
+
+  <div class="titulo">
+    <h1>
+      TEMPORIZADOR
+    </h1>
+  </div>
+ 
   
   <ion-list class="radio_buton_temporizador">
     <ion-radio-group  value="biff" (ionChange)="checkValue($event)">
@@ -17,22 +23,22 @@
       </ion-list-header>
   
       <ion-item>
-        <ion-label>60 SEGUNDOS</ion-label>
-        <ion-radio slot="start" value="60"></ion-radio>
+        <ion-label>1 MINUTO</ion-label>
+        <ion-radio slot="start" value="1"></ion-radio>
       </ion-item>
   
       <ion-item>
-        <ion-label>120 SEGUNDOS</ion-label>
-        <ion-radio slot="start" value="120"></ion-radio>
+        <ion-label>2 MINUTOS</ion-label>
+        <ion-radio slot="start" value="2"></ion-radio>
       </ion-item>
   
       <ion-item>
-        <ion-label>180 SEGUNDOS</ion-label>
-        <ion-radio slot="start" value="180"></ion-radio>
+        <ion-label>3 MINUTOS</ion-label>
+        <ion-radio slot="start" value="3"></ion-radio>
       </ion-item>
     </ion-radio-group>
     <ion-item>
-      <ion-button (click)="guardar()">GUARDAR</ion-button>
+      <ion-button color="light" (click)="guardar()">GUARDAR</ion-button>
     </ion-item>
 
   </ion-list>

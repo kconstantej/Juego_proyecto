@@ -1,5 +1,17 @@
-ion-title{
+.titulo{
     font-size: 30px;
-    
-    margin-left: 10%;
+    text-align: center;
+    color: white;
+}
+ion-list-header{
+    color: #5c2e76;
+}
+ion-item{
+    color: #5c2e76;
+    padding: 5%;
+}
+
+ion-button{
+    margin-right: 60%;
+    margin-left: 35%;
 }

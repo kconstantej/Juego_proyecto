@@ -70,7 +70,11 @@ const routes: Routes = [
   {
     path: 'actuacard',
     loadChildren: () => import('./actuacard/actuacard.module').then( m => m.ActuacardPageModule)
+  },  {
+    path: 'anagrama',
+    loadChildren: () => import('./anagrama/anagrama.module').then( m => m.AnagramaPageModule)
   },
+
 
 ];
 

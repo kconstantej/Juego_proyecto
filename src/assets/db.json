@@ -57,5 +57,14 @@
 	  "pista": "Como un Vice",
 	  "correct":"Jorge Glass"
 	}
+],"amarillo":[
+	{
+	  "pista": "Cerro ubicado el latacunga",
+	  "correct":"Volcan Cotopaxi"
+	},
+	{
+	  "pista": "Cerro ubicado el quito",
+	  "correct":"Volcan Sangay"
+	}
 ]
 }

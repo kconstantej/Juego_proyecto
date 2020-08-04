@@ -19,5 +19,5 @@ export interface Rojo {
 export interface Amarillo {
   resp: string[];
   pista: string;
-  question: string;
+  palabra: string;
 }

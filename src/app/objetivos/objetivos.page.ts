@@ -27,7 +27,7 @@ export class ObjetivosPage implements OnInit {
     if(fondo===''){
       this.imagen_base= 'backgroundClaro';
       localStorage.setItem('fondo',this.imagen_base);
-      console.log("casaaaaaaaaaaaa",this.imagen_base);
+      //console.log("casaaaaaaaaaaaa",this.imagen_base);
     }else{
       this.imagen_base=localStorage.getItem('fondo');
     
