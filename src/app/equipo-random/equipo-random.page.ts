@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-equipo-random',
@@ -9,12 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EquipoRandomPage implements OnInit {
   argumento=null;
+  equipoactual;
   temas={
     imagen_fondo: ''
   };
   
   imagen_base:string;
-  constructor(public activateRoute: ActivatedRoute, private navCtrl:NavController) {
+  constructor(public activateRoute: ActivatedRoute, private navCtrl:NavController, private storage:Storage) {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
     console.log('home',this.imagen_base)
@@ -38,6 +40,12 @@ export class EquipoRandomPage implements OnInit {
   }
   ngOnInit() {
     this.argumento=this.activateRoute.snapshot.paramMap.get('id');
+    this.cargarEquipo();
   }
-
+  async cargarEquipo(){
+    await this.storage.get('equipo').then(recv=>{
+      this.equipoactual=recv;
+      console.log('equipo', this.equipoactual);
+    });
+  }
 }
