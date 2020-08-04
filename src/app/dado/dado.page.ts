@@ -47,9 +47,11 @@ export class DadoPage implements OnInit {
     if(this.arg==1){
       this.imagen='./assets/img/Amarillo.png';
       this.color='Amarillo';
+      this.enlace='/anagrama';
     }if(this.arg==2){
       this.imagen='./assets/img/Azul.png';
       this.color='Azul';
+      this.enlace='/dibujocard';
     }if(this.arg==3){
       this.imagen='./assets/img/Morado.png';
       this.color='Morado';
@@ -57,9 +59,11 @@ export class DadoPage implements OnInit {
     }if(this.arg==4){
       this.imagen='./assets/img/Rojo.png';
       this.color='Rojo';
+      this.enlace='/opcioncard';
     }if(this.arg==5){
       this.imagen='./assets/img/Verde.png';
       this.color='Verde';
+      this.enlace='/actuacard';
     }
     console.log(this.arg);
     console.log(this.imagen);
