@@ -19,7 +19,6 @@ export class ActuacardPage implements OnInit {
   constructor(private datalocal: DataLocalService) { }
 
   ngOnInit() {
-    this.datalocal.firstTime();
     this.carga();
   }
 

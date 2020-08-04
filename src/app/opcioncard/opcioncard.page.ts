@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Rojo } from '../interfaces/interfaces';
 import { DataLocalService } from '../services/data-local.service';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-opcioncard',
@@ -9,6 +8,7 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./opcioncard.page.scss'],
 })
 export class OpcioncardPage implements OnInit {
+
   cards: Rojo [] = [];
   azarCard;
   resp: any [];
@@ -16,8 +16,9 @@ export class OpcioncardPage implements OnInit {
   ans;
 
   constructor( private datalocal: DataLocalService ) { }
+
   ngOnInit() {
-    this.datalocal.firstTime();
+    //this.datalocal.firstTime();
     this.datalocal.getCardsColor('Rojas')
     .then( resp => {
       console.log(resp);

@@ -19,8 +19,10 @@ export class DibujocardPage implements OnInit {
   constructor(private datalocal: DataLocalService ) { }
 
   ngOnInit() {
-    this.datalocal.firstTime();
-    this.datalocal.getCardsColor('Verdes')
+   this.carga();
+  }
+  async carga(){
+    await this.datalocal.getCardsColor('Azules')
     .then( resp => {
       console.log(resp);
       const randomNum = Math.trunc(Math.random() * (resp.length - 0) + 0);
