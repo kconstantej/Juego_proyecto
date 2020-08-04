@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { ActuacardPageRoutingModule } from './actuacard-routing.module';
 
 import { ActuacardPage } from './actuacard.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ActuacardPageRoutingModule
+    ActuacardPageRoutingModule,ComponentsModule
   ],
   declarations: [ActuacardPage]
 })

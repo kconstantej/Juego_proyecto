@@ -59,12 +59,71 @@
 	}
 ],"amarillo":[
 	{
-	  "pista": "Cerro ubicado el latacunga",
-	  "correct":"Volcan Cotopaxi"
+	  "pista": "lo llaman tambien alimento envuelto",
+	  "correct":"tamal",
+	  "palabra":"A-M-A-T-L"
 	},
 	{
-	  "pista": "Cerro ubicado el quito",
-	  "correct":"Volcan Sangay"
+	  "pista": "Plato tipico de Machachi",
+	  "correct":"yaguarlocro",
+	  "palabra":"A-R-G-U-A-Y-C-L-O-R-O"
+	},
+	{
+	  "pista": "Animal que esta en el escudo",
+	  "correct":"condor",
+	  "palabra":"R-O-D-N-O-C"
+	},
+	{
+	  "pista": "Ciudad mas turistica de tunguragua",
+	  "correct":"baños",
+	  "palabra":"S-O-Ñ-A-B"
+	},
+	{
+	  "pista": "Region del ecuador",
+	  "correct":"sierra",
+	  "palabra":"A-R-R-E-I-S"
+	},
+	{
+	  "pista": "Plato tipo de latacunga",
+	  "correct":"fritada",
+	  "palabra":"A-D-A-T-I-R-F"
+	},
+	{
+	  "pista": "Laguna ubicada en las afueras de Ibarra",
+	  "correct":"yaguarcocha",
+	  "palabra":"A-H-C-O-C-R-A-U-G-A-Y"
+	}
+	,
+	{
+	  "pista": "Plato tipico de Riobamba",
+	  "correct":"hornado",
+	  "palabra":"O-D-A-N-R-O-H"
+	},
+	{
+	  "pista": "Plato tipico de Riobamba",
+	  "correct":"hornado",
+	  "palabra":"O-D-A-N-R-O-H"
+	},
+	{
+	  "pista": "Region del ecuador",
+	  "correct":"oriente",
+	  "palabra":"E-T-N-E-I-R-O"
+	},
+	{
+	  "pista": "Es la capital de la Provincia de Tungurahua",
+	  "correct":"Ambato",
+	  "palabra":"O-T-A-B-M-A"
+	},
+	{
+	  "pista": "Conocido por la plaza de ponchos",
+	  "correct":"otavalo",
+	  "palabra":"O-T-A-L-A-O-V"
+	}
+	,
+	{
+	  "pista": "Playa mas conocida en Ecuador",
+	  "correct":"atacames",
+	  "palabra":"S-E-M-A-C-A-T-A"
 	}
 ]
 }

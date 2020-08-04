@@ -2,6 +2,8 @@ export interface RespuestaCards {
   rojo: Rojo[];
   verde: Verde[];
   azul: Verde[];
+  amarillo:Amarillo[];
+
 }
 
 export interface Verde {
@@ -20,4 +22,5 @@ export interface Amarillo {
   resp: string[];
   pista: string;
   palabra: string;
+  correct: string;
 }

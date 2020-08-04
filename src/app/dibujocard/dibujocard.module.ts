@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { DibujocardPageRoutingModule } from './dibujocard-routing.module';
 
 import { DibujocardPage } from './dibujocard.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DibujocardPageRoutingModule
+    DibujocardPageRoutingModule,ComponentsModule
   ],
   declarations: [DibujocardPage]
 })

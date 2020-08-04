@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { AnagramaPageRoutingModule } from './anagrama-routing.module';
 
 import { AnagramaPage } from './anagrama.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AnagramaPageRoutingModule
+    AnagramaPageRoutingModule,ComponentsModule
   ],
   declarations: [AnagramaPage]
 })
