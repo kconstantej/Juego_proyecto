@@ -32,30 +32,260 @@
 		],
 		"correct":"Quito",
 		"question": "A QUE CIUDAD SE LE DICE 'EL ALMA DEL MUNDOS' "
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Quito",
+		  "Riobamba",
+		  "Ambato",
+		  "Cuenca"
+		],
+		"correct":"Quito",
+		"question": "A QUE CIUDAD SE LE DICE 'CARITA DE DIOS' "
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Quito",
+		  "Latacunga",
+		  "Macas",
+		  "Cuenca"
+		],
+		"correct":"Quito",
+		"question": "A QUE CIUDAD SE LE DICE 'LUZ DE AMERICA' "
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Ambato",
+		  "Latacunga",
+		  "Macas",
+		  "Cuenca"
+		],
+		"correct":"Ambato",
+		"question": "A QUE CIUDAD SE LE DICE 'CUNA DE LOS TRES JUANES' "
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Ambato",
+		  "Macas",
+		  "Riobamba",
+		  "Cuenca"
+		],
+		"correct":"Ambato",
+		"question": "A QUE CIUDAD SE LE DICE 'CIUDAD DE LAS FLORES Y LAS FRUTAS'"
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Ambato",
+		  "Macas",
+		  "Riobamba",
+		  "Latacunga"
+		],
+		"correct":"Latacunga",
+		"question": "A QUE CIUDAD SE LE DICE 'PENSIL DE LOS ANDES'"
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Ambato",
+		  "Quito",
+		  "Riobamba",
+		  "Latacunga"
+		],
+		"correct":"Latacunga",
+		"question": "A QUE CIUDAD SE LE DICE 'CIUDAD DE LEÓN'"
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Ambato",
+		  "Latacunga",
+		  "Riobamba",
+		  "Quito"
+		],
+		"correct":"Latacunga",
+		"question": "A QUE CIUDAD SE LE DICE 'CIUDAD DE LOS MASHCAS'"
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Guayaquil",
+		  "Cuenca",
+		  "Riobamba",
+		  "Quito"
+		],
+		"correct":"Riobamba",
+		"question": "A QUE CIUDAD SE LE CONOCE COMO 'CUNA DE LA NACIONALIDAD ECUATORIANA'"
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Riobamba",
+		  "Cuenca",
+		  "Guayaquil",
+		  "Ambato"
+		],
+		"correct":"Riobamba",
+		"question": "A QUE CIUDAD SE LE DICE 'SILUETA DE LOS ANDES' "
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Portoviejo",
+		  "Riobamba",
+		  "Guayaquil",
+		  "Loja"
+		],
+		"correct":"Riobamba",
+		"question": "A QUE CIUDAD SE LE DICE 'CIUDAD BONITA' "
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Portoviejo",
+		  "Tena",
+		  "Guayaquil",
+		  "Riobamba"
+		],
+		"correct":"Riobamba",
+		"question": "A QUE CIUDAD SE LE DICE 'CIUDAD DE LAS PRIMICIAS' "
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Cuenca",
+		  "Tena",
+		  "Guayaquil",
+		  "Riobamba"
+		],
+		"correct":"Cuenca",
+		"question": "A QUE CIUDAD SE LE DICE 'ATENAS DEL ECUADOR' "
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Portoviejo",
+		  "Machala",
+		  "Guayaquil",
+		  "Esmeraldas"
+		],
+		"correct":"Machala",
+		"question": "A QUE CIUDAD SE LE DICE 'CAPITAL MUNDIAL DEL BANANO' "
+	  },
+	  {
+		"_id": "5f20b8464d0f74cc60a8",
+		"resp": [
+		  "Ambato",
+		  "Loja",
+		  "Tena",
+		  "Guaranda"
+		],
+		"correct":"Tena",
+		"question": "A QUE CIUDAD SE LE DICE 'CAPITAL DE LAS ORQUÍDEAS' "
 	  }
   ],
   "verde":[
 	  {
-		"_id": "5f20b846b7fe3ab49985a641",
-		"pista": "Cerro ubicado el latacunga",
-		"correct":"Volcan Cotopaxi"
+		"pista": "Como un actor, humorista ambateño, que represento la sal quiteña",
+		"correct":"Evaristo Corral y Chancleta"
 	  },
 	  {
-		"_id": "5f20b846b7fe3ab49985a641",
-		"pista": "Cerro ubicado el quito",
-		"correct":"Volcan Sangay"
+		"pista": "Como un burro (humano)",
+		"correct":"Lenin Moreno"
+	  },
+	  {
+		"pista": "El ganador de la medalla de oro más joven de la historia",
+		"correct":"Jeferson Pérez"
+	  },
+	  {
+		"pista": "Cantante Ecuatoriano nacido en Bolivar",
+		"correct":"Gerardo Moran"
+	  },
+	  {
+		"pista": "Primer periodista de Quito",
+		"correct":"Eugenio Espejo"
+	  },
+	  {
+		"pista": "Presidente destituido por incapacidad mental",
+		"correct":"Abdala Bucaram"
+	  },
+	  {
+		"pista": "Presidente conocido por su firme postura sobre los derechos humanos",
+		"correct":"Jeferson Pérez"
+	  },
+	  {
+		"pista": "Presidente conocido como el Viejo luchador",
+		"correct":"Eloy Alfaro"
+	  },
+	  {
+		"pista": "Terrateniente que a pesar de recibir 4 heridas de bala continuo en la linea de fuego",
+		"correct":"Abdon Calderon"
+	  },
+	  {
+		"pista": "Ex jugador del nacional, ldu y manchester united",
+		"correct":"Antonio Valencia"
+	  },
+	  {
+		"pista": "Ex integrante de tercer mundo",
+		"correct":"Juan Fernando Velasco"
+	  },
+	  {
+		"pista": "Gran Mariscal de Ayacucho",
+		"correct":"Antonio Jose de Sucre"
+	  },
+	  {
+		"pista": "Pintor y escultor ecuatoriano de kichwa y patrimonio mestizo.",
+		"correct":"Oswaldo Guayasamin"
+	  },
+	  {
+		"pista": "Escritor ambateño, escribio la letra del himno nacional del ecuador",
+		"correct":"Juan Leon Mera"
 	  }
   ],
   "azul":[
 	{
-	  "_id": "5f20b846b7fe3ab49985a641",
-	  "pista": "Como un expresidente patojo",
-	  "correct":"Lenin Moreno"
+	  "pista": "Elevación situada en el corazón mismo de la ciudad de Quito",
+	  "correct":"El Panecillo"
 	},
 	{
-	  "_id": "5f20b846b7fe3ab49985a641",
-	  "pista": "Como un Vice",
-	  "correct":"Jorge Glass"
+	  "pista": "Ubicación exacta de la línea Ecuatorial",
+	  "correct":"Mitad del Mundo"
+	},
+	{
+	  "pista": "Ave que simboliza el poderío, la grandeza y la altivez del ecuador",
+	  "correct":"La cruz del papa"
+	},
+	{
+	  "pista": "Impresionante Cascada ubicada en baños",
+	  "correct":"El pailon del diablo"
+	},
+	{
+	  "pista": "El segundo volcán más alto del país",
+	  "correct":"Volcan Cotopaxi"
+	},
+	{
+	  "pista": "Laguna formada por el colapso de un volcan",
+	  "correct":"Aguna de Quilotoa"
+	},
+	{
+	  "pista": "Punto mas alejado del centro de la tierra",
+	  "correct":"Volcan Chimborazo"
+	},
+	{
+	  "pista": "Joya de la arquitectura continental",
+	  "correct":"Iglesia San Francisco"
+	},
+	{
+	  "pista": "Iglesia Consagracion de Jesus",
+	  "correct":"Basílica"
+	},
+	{
+	  "pista": "Trnasporte aereo de Quito",
+	  "correct":"El teleferico"
 	}
 ],"amarillo":[
 	{
