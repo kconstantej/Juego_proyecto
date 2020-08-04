@@ -79,12 +79,12 @@
   --ion-color-light-tint: #f5f6f9;
 
   /** boton inicio **/
-  --ion-color-boton_inicio: #ffffff;
-  --ion-color-boton_inicio-rgb: 255,255,255;
-  --ion-color-boton_inicio-contrast: #5c2e76;
-  --ion-color-boton_inicio-contrast-rgb: 0,0,0;
-  --ion-color-boton_inicio-shade: #e0e0e0;
-  --ion-color-boton_inicio-tint: #ffffff;
+  --ion-color-boton_inicio: #5c2e76;
+  --ion-color-boton_inicio-rgb: 136,56,255;
+  --ion-color-boton_inicio-contrast: #ffffff;
+  --ion-color-boton_inicio-contrast-rgb: 136,56,255;
+  --ion-color-boton_inicio-shade: #5c2e76;
+  --ion-color-boton_inicio-tint: #5c2e76;
 }
 
 @media (prefers-color-scheme: dark) {

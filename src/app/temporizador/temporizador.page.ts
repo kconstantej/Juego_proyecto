@@ -67,14 +67,14 @@ export class TemporizadorPage implements OnInit {
       tiempo:this.tiempo
     };
     await this.storage.set('temporizador', this.tiempo);
-    this.storage.get('temporizador').then((val) => {
+    await this.storage.get('temporizador').then((val) => {
       
-      //console.log('temporizador=', val);
+      console.log('temporizador=', val);
     });
     await this.presentAlert();
     this.router.navigate(['/configuraciones']);
 
-    //console.log(temporizador);
+
     
 
     
