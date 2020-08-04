@@ -26,7 +26,6 @@ export class HomePage {
     
   }
   validar_fondo(fondo){
-    
     if(fondo===''){
       this.imagen_base= 'backgroundClaro';
       localStorage.setItem('fondo',this.imagen_base);
