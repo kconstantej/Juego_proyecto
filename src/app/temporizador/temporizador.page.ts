@@ -3,6 +3,7 @@ import { Storage } from '@ionic/storage';
 import { AlertController } from '@ionic/angular';
 
 import { RouterModule, Router } from '@angular/router';
+let tiempo;
 
 @Component({
   selector: 'app-temporizador',
@@ -39,7 +40,7 @@ export class TemporizadorPage implements OnInit {
       
     }
   }
-  tiempo='';
+  
   
 
   ngOnInit() {
@@ -63,11 +64,9 @@ export class TemporizadorPage implements OnInit {
 
   async guardar(){
     //console.log(this.tiempo)
-    let temporizador={
-      tiempo:this.tiempo
-    };
+    
     await this.storage.set('temporizador', this.tiempo);
-    await this.storage.get('temporizador').then((val) => {
+    this.storage.get('temporizador').then((val) => {
       
       console.log('temporizador=', val);
     });

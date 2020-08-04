@@ -18,7 +18,9 @@ export class ObjetivosPage implements OnInit {
   constructor() {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
-    console.log('home',this.imagen_base)
+    console.log('home',this.imagen_base);
+    
+    
     
     
   }

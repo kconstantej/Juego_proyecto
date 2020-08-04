@@ -39,8 +39,9 @@ export class RelojComponent implements OnInit {
   }
   async ngOnInit() {
     await this.storage.get('temporizador').then((val) => { 
-      console.log(val);  
-      this.iniciar(val); 
+      let va =Number(val);
+      console.log(va);  
+      this.iniciar(va); 
     });
     
   }
