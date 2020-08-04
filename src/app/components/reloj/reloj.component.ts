@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-reloj',
   templateUrl: './reloj.component.html',
@@ -10,9 +11,10 @@ export class RelojComponent implements OnInit {
 
   time :BehaviorSubject<string>=new BehaviorSubject('00:00');
   iniciaren =1 ;
-  constructor() {
+  constructor(private storage: Storage) {
    }
-  iniciar(duracion:number){
+   async iniciar(duracion:number){
+   
     this.timer=duracion*60;
     setInterval(()=>{
       this.actualizartiempo();
@@ -35,8 +37,12 @@ export class RelojComponent implements OnInit {
       this.iniciar(0);
     }
   }
-  ngOnInit() {
-    this.iniciar(this.iniciaren);
+  async ngOnInit() {
+    await this.storage.get('temporizador').then((val) => {   
+      this.iniciar(val);
+    });
+    
   }
+  
 
 }

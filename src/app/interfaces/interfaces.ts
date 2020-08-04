@@ -16,3 +16,8 @@ export interface Rojo {
   correct: string;
   question: string;
 }
+export interface Amarillo {
+  resp: string[];
+  pista: string;
+  question: string;
+}
