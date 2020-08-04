@@ -18,22 +18,20 @@ export class EstilosPage implements OnInit {
   constructor() {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
-    //console.log('home',this.imagen_base)
-    
-    
-  }
-  validar_fondo(fondo){
+    //console.log('+++++++',this.imagen_base)
+
+   }
+   validar_fondo(fondo){
     
     if(fondo===''){
-      this.imagen_base= 'backgroundClaro';
-      localStorage.setItem('fondo',this.imagen_base);
-      //console.log("casaaaaaaaaaaaa",this.imagen_base);
+      //console.log('casaaaaaaaaaaaa',fondo,'---------');
+      localStorage.setItem('fondo','backgroundClaro');
+      this.imagen_base= localStorage.getItem('fondo');
     }else{
-      this.imagen_base=localStorage.getItem('fondo');
-    
-      
+      this.imagen_base= localStorage.getItem('fondo');
     }
   }
+
 
   ngOnInit() {
   }

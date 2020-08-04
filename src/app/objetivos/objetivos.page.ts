@@ -20,10 +20,7 @@ export class ObjetivosPage implements OnInit {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
     console.log('home',this.imagen_base);
-    storage.set('temporizador', '60');
-    storage.get('temporizador').then((val) => {
-      //console.log('Your age is:', val);
-    });
+    
     
     
     

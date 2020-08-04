@@ -47,7 +47,7 @@ export class AppComponent {
     localStorage.setItem("fondo","");
     
     this.initializeApp();
-    this.storage.set('temporizador', 1);
+    this.storage.set('temporizador', "1");
     
   }
   
