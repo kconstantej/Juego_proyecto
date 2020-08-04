@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-morada',
@@ -12,7 +13,7 @@ export class MoradaPage implements OnInit {
   };
   
   imagen_base:string;
-  constructor() {
+  constructor(private router: Router) {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
     console.log('home',this.imagen_base)
@@ -29,6 +30,18 @@ export class MoradaPage implements OnInit {
     
       
     }
+  }
+  btnAmarilla(){
+    this.router.navigate(['/anagrama']);
+  }
+  btnAzul(){
+    this.router.navigate(['/dibujocard']);
+  }
+  btnRojo(){
+    this.router.navigate(['/opcioncard']);
+  }
+  btnVerde(){
+    this.router.navigate(['/actuacard']);
   }
   ngOnInit() {
   }
