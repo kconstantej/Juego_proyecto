@@ -11,4 +11,32 @@
     
   </ion-toolbar>
 
+  <ion-list class="radio_buton_temporizador">
+    <ion-radio-group  value="biff" (ionChange)="checkValue($event)">
+      <ion-list-header>
+        <h1 [class]="fuente_base" >ELIJA UN ESTILO</h1>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label class="fuente1">Tipo de letra número 1</ion-label>
+        <ion-radio slot="start" value="1"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label class="fuente2">Tipo de letra número 2</ion-label>
+        <ion-radio slot="start" value="2"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label class="fuente3">Tipo de letra número 3</ion-label>
+        <ion-radio slot="start" value="3"></ion-radio>
+      </ion-item>
+      
+    </ion-radio-group>
+    <ion-item>
+      <ion-button color="light" (click)="guardar()">GUARDAR</ion-button>
+    </ion-item>
+
+  </ion-list>
+
 </ion-content>

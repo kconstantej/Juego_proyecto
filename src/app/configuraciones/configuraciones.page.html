@@ -1,20 +1,20 @@
 
 
-<ion-content [class]="imagen_base" fullscreen="true">
+<ion-content [class]="imagen_base" fullscreen="true" (click)="opcion()">
   <ion-toolbar >
     <ion-buttons slot="start">
       <ion-icon name="arrow-back-outline" routerLink="/"></ion-icon>
     </ion-buttons>
     <div class="titulo">
-      <h1>CONFIGURACIONES</h1>
+      <h1 [class]="fuente_base">CONFIGURACIONES</h1>
     </div>
     
   </ion-toolbar>
   
   <div class="botones_configuracion">
-    <ion-button class="botones_configuracion" slot="start" expand="full" routerLink="/temporizador">TEMPORIZADOR</ion-button>
-    <ion-button class="botones_configuracion" expand="full" routerLink="/temas">TEMAS</ion-button>
-  <ion-button class="botones_configuracion" expand="full" routerLink="/estilos">ESTILOS</ion-button> 
+    <ion-button class="botones_configuracion" shape="round" slot="start" expand="full" routerLink="/temporizador" (click)="inicializar()">TEMPORIZADOR</ion-button>
+    <ion-button class="botones_configuracion" expand="full" shape="round" routerLink="/temas" (click)="inicializar()">TEMAS</ion-button>
+  <ion-button class="botones_configuracion" expand="full" shape="round" routerLink="/estilos" (click)="inicializar()">ESTILOS</ion-button> 
   </div>
   
   

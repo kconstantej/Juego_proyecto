@@ -79,12 +79,44 @@
   --ion-color-light-tint: #f5f6f9;
 
   /** boton inicio **/
-  --ion-color-boton_inicio: #5c2e76;
+  --ion-color-boton_inicio: #2b1641;
   --ion-color-boton_inicio-rgb: 136,56,255;
-  --ion-color-boton_inicio-contrast: #ffffff;
+  --ion-color-boton_inicio-contrast: #2b1641;
   --ion-color-boton_inicio-contrast-rgb: 136,56,255;
-  --ion-color-boton_inicio-shade: #5c2e76;
-  --ion-color-boton_inicio-tint: #5c2e76;
+  --ion-color-boton_inicio-shade: #2b1641;
+  --ion-color-boton_inicio-tint: #2b1641;
+
+  /* facebook */
+  --ion-color-facebook: #1f00d1;
+  --ion-color-facebook-rgb: 31, 0, 209;
+  --ion-color-facebook-contrast: #ffffff;
+  --ion-color-facebook-contrast-rgb: 255, 255, 255;
+  --ion-color-facebook-shade: #1b00b8;
+  --ion-color-facebook-tint: #351ad6;
+
+  /* whatsapp */
+  --ion-color-whatsapp: #00ff26;
+  --ion-color-whatsapp-rgb: 0, 255, 38;
+  --ion-color-whatsapp-contrast: #ffffff;
+  --ion-color-whatsapp-contrast-rgb: 0, 0, 0;
+  --ion-color-whatsapp-shade: #00e021;
+  --ion-color-whatsapp-tint: #1aff3c;
+
+
+  --ion-color-yellow: #ffff00;
+  --ion-color-yellow-rgb: 255,255,0;
+  --ion-color-yellow-contrast: #000000;
+  --ion-color-yellow-contrast-rgb: 0,0,0;
+  --ion-color-yellow-shade: #e0e000;
+  --ion-color-yellow-tint: #ffff1a;
+
+
+  --ion-color-red: #fb0000;
+  --ion-color-red-rgb: 251,0,0;
+  --ion-color-red-contrast: #ffffff;
+  --ion-color-red-contrast-rgb: 255,255,255;
+  --ion-color-red-shade: #dd0000;
+  --ion-color-red-tint: #fb1a1a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -117,14 +149,14 @@
 
     --ion-color-success: #2fdf75;
     --ion-color-success-rgb: 47,223,117;
-    --ion-color-success-contrast: #000000;
+    --ion-color-success-contrast: #ffffff;
     --ion-color-success-contrast-rgb: 0,0,0;
     --ion-color-success-shade: #29c467;
     --ion-color-success-tint: #44e283;
 
     --ion-color-warning: #ffd534;
     --ion-color-warning-rgb: 255,213,52;
-    --ion-color-warning-contrast: #000000;
+    --ion-color-warning-contrast: #ffffff;
     --ion-color-warning-contrast-rgb: 0,0,0;
     --ion-color-warning-shade: #e0bb2e;
     --ion-color-warning-tint: #ffd948;
@@ -163,6 +195,58 @@
    * -------------------------------------------
    */
 
+   .fuente3{
+    font-family: 'Montserrat', sans-serif !important;
+    src:url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  }
+  .fuente2{
+    font-family: 'MuseoModerno', cursive !important;
+    src:url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&display=swap');
+  }
+  .fuente1{
+    font-family: 'Lora', serif !important; 
+    src:url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+  }
+  
+  .fuente4{
+    font-family: 'MuseoModerno', cursive !important; 
+    src:url('../assets/fonds/MuseoModerno/MuseoModerno-VariableFont_wght.ttf');
+  }
+  
+  .fuente5{
+    font-family: 'Oswald', sans-serif !important; 
+    src:url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+  }
+  .fuente6 {
+    font-family: 'Ranchers', cursive !important;
+    src: url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap')
+}
+
+.ion-color-red {
+  --ion-color-base: var(--ion-color-red) !important;
+  --ion-color-base-rgb: var(--ion-color-red-rgb) !important;
+  --ion-color-contrast: var(--ion-color-red-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-red-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-red-shade) !important;
+  --ion-color-tint: var(--ion-color-red-tint) !important;
+}
+.ion-color-yellow {
+  --ion-color-base: var(--ion-color-yellow) !important;
+  --ion-color-base-rgb: var(--ion-color-yellow-rgb) !important;
+  --ion-color-contrast: var(--ion-color-yellow-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-yellow-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-yellow-shade) !important;
+  --ion-color-tint: var(--ion-color-yellow-tint) !important;
+}
+.ion-color-whatsapp {
+  --ion-color-base: var(--ion-color-whatsapp) !important;
+  --ion-color-base-rgb: var(--ion-color-whatsapp-rgb) !important;
+  --ion-color-contrast: var(--ion-color-whatsapp-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-whatsapp-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-whatsapp-shade) !important;
+  --ion-color-tint: var(--ion-color-whatsapp-tint) !important;
+}
   .ios body {
     --ion-background-color: #000000;
     --ion-background-color-rgb: 0,0,0;
@@ -197,7 +281,14 @@
     --ion-card-background: #1c1c1d;
   }
 
-
+  .ion-color-facebook {
+    --ion-color-base: var(--ion-color-facebook) !important;
+    --ion-color-base-rgb: var(--ion-color-facebook-rgb) !important;
+    --ion-color-contrast: var(--ion-color-facebook-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-facebook-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-facebook-shade) !important;
+    --ion-color-tint: var(--ion-color-facebook-tint) !important;
+}
   /*
    * Material Design Dark Theme
    * -------------------------------------------

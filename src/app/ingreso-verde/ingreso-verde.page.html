@@ -1,0 +1,36 @@
+
+
+<ion-content [class]="imagen_base">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back-outline" routerLink="/ingresar"></ion-icon>
+    </ion-buttons>
+    <div class="titulo">
+      <h1>VERDDE</h1>
+    </div>
+    
+  </ion-toolbar>
+ 
+
+    <form (ngSubmit)="registroDatos()" color="success">
+      <ion-list color="success">
+        <ion-item color="success">
+          <ion-label position='floating'>Ingrese la pista</ion-label>
+          <ion-input type="text" [(ngModel)]='informacion.pista' name='nombres'></ion-input>
+  
+        </ion-item>
+        <ion-item color="success">
+          <ion-label position='floating'>Ingrese respuesta </ion-label>
+          <ion-input type="text" [(ngModel)]='informacion.correct' name='email'></ion-input>
+  
+        </ion-item>
+        
+        <ion-item color="green">
+          <ion-button color="success" expand="full" type="submit">ENVIAR</ion-button>
+        </ion-item>
+      </ion-list>
+  
+    </form>
+ 
+
+</ion-content>
