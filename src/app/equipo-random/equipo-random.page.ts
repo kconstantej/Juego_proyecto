@@ -40,12 +40,18 @@ export class EquipoRandomPage implements OnInit {
   }
   ngOnInit() {
     this.argumento=this.activateRoute.snapshot.paramMap.get('id');
+    this.equipoJugando();
     this.cargarEquipo();
   }
   async cargarEquipo(){
-    await this.storage.get('equipo').then(recv=>{
+    await this.storage.get('jugando').then(recv=>{
       this.equipoactual=recv;
       console.log('equipo', this.equipoactual);
     });
+  }
+
+  async equipoJugando(){
+    await this.storage.set('jugando',this.argumento);
+    
   }
 }
