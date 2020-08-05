@@ -3,7 +3,8 @@ import { Amarillo } from '../interfaces/interfaces';
 import { DataLocalService } from '../services/data-local.service';
 import { timer } from 'rxjs';
 import { ToastController } from '@ionic/angular';
-
+import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-anagrama',
   templateUrl: './anagrama.page.html',
@@ -17,7 +18,9 @@ export class AnagramaPage implements OnInit {
   respuesta:string;
   palabra: string;
   ans: string;
-  constructor(private datalocal: DataLocalService, private toastCtrl :ToastController) { }
+  cambio;
+  equipos;
+  constructor(private datalocal: DataLocalService, private toastCtrl :ToastController,private router: Router, private storage: Storage) { }
   async presentarT(mensaje:string){
     const toast=await  this.toastCtrl.create({
       message:mensaje,
@@ -26,7 +29,11 @@ export class AnagramaPage implements OnInit {
     toast.present();
   }
   ngOnInit() {
-    this.datalocal.getCardsColor('Amarillo')
+    this.amarillo();
+  }
+
+  async amarillo(){
+    await this.datalocal.getCardsColor('Amarillo')
     .then( resp => {
       console.log(resp);
       const randomNum = Math.trunc(Math.random() * (resp.length - 0) + 0);
@@ -40,9 +47,11 @@ export class AnagramaPage implements OnInit {
   answer(){
     if (this.ans === this.respuesta){
       this.presentarT('Respuesta Correcta ');
+      this.acerto();
       console.log(true);
     }else{
       console.log(false);
+      this.fallo();
       this.presentarT('Fallaste sigue intentadolo !!');
     }
   }
@@ -52,5 +61,39 @@ export class AnagramaPage implements OnInit {
       document.getElementById('oculto').style.display = "none";
      });
   }
+  acerto(){
+    this.router.navigate(['/lanzar-dado'])
+  }
+
+  async fallo(){
+    await this.storage.get('equipo').then(recv=>{
+      this.equipos=recv;
+      console.log('equipos',this.equipos);
+    });
+    await this.storage.get('jugando').then(otro=>{
+
+      if(this.equipos[0].equipo===otro){
+        // this.storage.set('jugando', this.equipos[1]);
+        this.cambiar(this.equipos[1].equipo);
+        // this.cambio=this.equipos[1].equipo;
+      }if(this.equipos[1].equipo===otro){
+        // this.storage.set('jugando', this.equipos[0]);
+        // // this.cambio=this.equipos[0].equipo;
+        this.cambiar(this.equipos[0].equipo);
+
+      }
+      console.log(this.equipos[0].equipo, '=', otro);
+      console.log(this.equipos[1].equipo, '=', otro);
+
+    });
+    
+    this.router.navigate(['/lanzar-dado']);
+
+  }
+  async cambiar(equipo:any){
+    await this.storage.set('jugando', equipo);
+    console.log('cambiar',equipo);
+  }
+
 
 }
