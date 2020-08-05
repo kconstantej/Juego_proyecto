@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-lanzar-dado',
   templateUrl: './lanzar-dado.page.html',
@@ -10,14 +10,18 @@ export class LanzarDadoPage implements OnInit {
   temas={
     imagen_fondo: ''
   };
-  
+  equipo;
   imagen_base:string;
-  constructor(private router: Router) {
+  constructor( private router: Router, private storage: Storage) {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
-    console.log('home',this.imagen_base)
-    
+    console.log('home',this.imagen_base);
+    this.muestra();
    }
+   ngOnInit() {
+    this.muestra();
+  }
+
    validar_fondo(fondo){
     
     if(fondo===''){
@@ -30,16 +34,21 @@ export class LanzarDadoPage implements OnInit {
       
     }
   }
-  public  random() {
+  random() {
     //console.log(this.informacion);
     let rd = Math.floor(Math.random()*((5-1)+1))+1;
     console.log(rd);
     this.router.navigate(['/dado',rd])
     
   }
-
-  ngOnInit() {
+   muestra(){
+    console.log('entro en muestra');
+     this.storage.get('jugando').then(recv=>{
+      this.equipo=recv;
+      console.log('muestra',this.equipo);
+    });
   }
+
 
 }
 

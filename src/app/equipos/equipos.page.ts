@@ -43,19 +43,19 @@ export class EquiposPage implements OnInit {
   }
 
   async registroDatos() {
-    console.log(this.informacion);
+    //console.log(this.informacion);
     let rd = Math.floor(Math.random()*((2-1)+1))+1;
     console.log(rd);
-    await this.datalocal.equipo(this.informacion.nombre_equipo1, rd);
+    
     if(rd==1){
       this.router.navigate(['/equipo-random',this.informacion.nombre_equipo1])
-     
-      console.log(this.informacion.nombre_equipo1);
-      
+      await this.datalocal.equipo(this.informacion.nombre_equipo1, rd, this.informacion.nombre_equipo2, rd+1);
+      //console.log(this.informacion.nombre_equipo1);
     }
     if(rd==2){
       this.router.navigate(['/equipo-random',this.informacion.nombre_equipo2])
-      
+      await this.datalocal.equipo(this.informacion.nombre_equipo1, rd, this.informacion.nombre_equipo2, rd-1);
+      //console.log(this.informacion.nombre_equipo2);
     }
   }
 

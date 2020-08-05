@@ -1,0 +1,56 @@
+
+
+<ion-content [class]="imagen_base">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back-outline" routerLink="/ingresar"></ion-icon>
+    </ion-buttons>
+    <div class="titulo">
+      <h1>ROJA</h1>
+    </div>
+    
+  </ion-toolbar>
+ 
+
+    <form (ngSubmit)="registroDatos()" color="danger">
+      <ion-list color="danger">
+        <ion-item color="danger">
+          <ion-label position='floating'>Ingrese la pregunta</ion-label>
+          <ion-input type="text" [(ngModel)]='informacion.question' name="question"></ion-input>
+  
+        </ion-item>
+        <ion-item color="danger">
+          <ion-label position='floating'>Ingrese opcion 1</ion-label>
+          <ion-input type="text" [(ngModel)]='res1' name="res1"></ion-input>
+  
+        </ion-item>
+        <ion-item color="danger">
+          <ion-label position='floating'>Ingrese opcion 2</ion-label>
+          <ion-input type="text" [(ngModel)]='res2' name="res2"></ion-input>
+  
+        </ion-item>
+        <ion-item color="danger">
+          <ion-label position='floating'>Ingrese opcion 3</ion-label>
+          <ion-input type="text" [(ngModel)]='res3' name="res3"></ion-input>
+  
+        </ion-item>
+        <ion-item color="danger">
+          <ion-label position='floating'>Ingrese opcion 4</ion-label>
+          <ion-input type="text" [(ngModel)]='res4' name="res4"></ion-input>
+  
+        </ion-item>
+        <ion-item color="danger">
+          <ion-label position='floating'>Ingrese la respuesta</ion-label>
+          <ion-input type="text" [(ngModel)]='informacion.correct' name="correct"></ion-input>
+  
+        </ion-item>
+        
+        <ion-item color="red">
+          <ion-button color="danger" expand="full" type="submit">ENVIAR</ion-button>
+        </ion-item>
+      </ion-list>
+  
+    </form>
+ 
+
+</ion-content>

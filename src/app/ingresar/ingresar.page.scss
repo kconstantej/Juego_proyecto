@@ -1,0 +1,35 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    }
+  
+    .titulo{
+      font-size: 30px;
+      text-align: center;
+      color: white;
+      
+  }
+  
+  ion-buttons{
+    font-size: 200%;
+    color: white;
+  
+  }
+  
+  .azul{
+      color: blue;
+  }
+  
+  .amarillo{
+      color: yellow;
+  }
+
+
+b{
+    text-align: center;
+}
+
+ion-button.botones_configuracion{
+    margin-bottom: 10%;
+    
+}

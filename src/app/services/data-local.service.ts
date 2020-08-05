@@ -7,10 +7,18 @@ import { Rojo, Verde, Amarillo } from '../interfaces/interfaces';
   providedIn: 'root'
 })
 export class DataLocalService {
-  eq = {
-    id: " ",
-    equipo: " "
+  juega={
+    id:'',
+    equipo:''
   }
+  eq=[{
+    id:'',
+    equipo:''
+  },{
+    id:'',
+    equipo:''
+  }
+]
 
   cardsR: Rojo [] = [];
   cardsG: Verde [] = [];
@@ -41,11 +49,23 @@ export class DataLocalService {
     return this.storage.get(color);
   }
   
-  async equipo(equipo2:any, id2:any ){
-    this.eq = {
-      id: id2,
-      equipo: equipo2
-    }
+  async equipo(equipo2:any, id2:any, equipo1:any, id1:any  ){
+    this.eq = [{
+      id: id1,
+      equipo: equipo1
+    },
+  {
+    id: id2,
+    equipo: equipo2
+  }];
     return await this.storage.set('equipo', this.eq);
+  }
+
+  async jugando(equipo:any, id:any ){
+    this.juega = {
+      id: id,
+      equipo: equipo
+    };
+    return await this.storage.set('jugando', this.juega);
   }
 }

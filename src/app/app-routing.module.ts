@@ -74,6 +74,26 @@ const routes: Routes = [
     path: 'anagrama',
     loadChildren: () => import('./anagrama/anagrama.module').then( m => m.AnagramaPageModule)
   },
+  {
+    path: 'ingresar',
+    loadChildren: () => import('./ingresar/ingresar.module').then( m => m.IngresarPageModule)
+  },
+  {
+    path: 'ingreso-rojo',
+    loadChildren: () => import('./ingreso-rojo/ingreso-rojo.module').then( m => m.IngresoRojoPageModule)
+  },
+  {
+    path: 'ingreso-verde',
+    loadChildren: () => import('./ingreso-verde/ingreso-verde.module').then( m => m.IngresoVerdePageModule)
+  },
+  {
+    path: 'ingreso-amarillo',
+    loadChildren: () => import('./ingreso-amarillo/ingreso-amarillo.module').then( m => m.IngresoAmarilloPageModule)
+  },
+  {
+    path: 'ingreso-azul',
+    loadChildren: () => import('./ingreso-azul/ingreso-azul.module').then( m => m.IngresoAzulPageModule)
+  },
 
 
 ];
