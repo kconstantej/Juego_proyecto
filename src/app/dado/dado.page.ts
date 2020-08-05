@@ -34,12 +34,8 @@ export class DadoPage implements OnInit {
       localStorage.setItem('fondo',this.imagen_base);
       console.log("casaaaaaaaaaaaa",this.imagen_base);
     }else{
-      this.imagen_base=localStorage.getItem('fondo');
-    
-      
+      this.imagen_base=localStorage.getItem('fondo');  
     }
- 
-    
   }
 
   ngOnInit() {
