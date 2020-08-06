@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
 import { RouterModule, Router } from '@angular/router';
  let contador=0;
 @Component({
@@ -17,7 +18,7 @@ export class ConfiguracionesPage implements OnInit {
   fuente_base: string;
   
   
-  constructor( public router:Router) {
+  constructor( public router:Router, private iab: InAppBrowser) {
     this.validar_fondo(localStorage.getItem('fondo'),localStorage.getItem('fuente'))
     this.imagen_base= localStorage.getItem('fondo');
     this.fuente_base=localStorage.getItem('fuente');
@@ -57,4 +58,10 @@ export class ConfiguracionesPage implements OnInit {
       contador=0;
     }
   }
+
+  openBlank(){
+    this.iab.create('https://firebasestorage.googleapis.com/v0/b/angular-html-11.appspot.com/o/tablero.pdf?alt=media&token=3761634d-7aa4-484c-afbf-e4836b763072')
+  }
+
+  
 }

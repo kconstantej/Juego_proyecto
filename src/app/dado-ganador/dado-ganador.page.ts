@@ -2,14 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
 @Component({
-  selector: 'app-lanzar-dado',
-  templateUrl: './lanzar-dado.page.html',
-  styleUrls: ['./lanzar-dado.page.scss'],
+  selector: 'app-dado-ganador',
+  templateUrl: './dado-ganador.page.html',
+  styleUrls: ['./dado-ganador.page.scss'],
 })
-export class LanzarDadoPage implements OnInit {
+export class DadoGanadorPage implements OnInit {
   temas={
     imagen_fondo: ''
   };
+
+  inicio;
 
   imagen_base:string;
   constructor( private router: Router, private storage: Storage) {
@@ -19,8 +21,13 @@ export class LanzarDadoPage implements OnInit {
     //this.muestra();
    }
    ngOnInit() {
-    // const equipo = this.storage.get('jugando');
-    // console.log(equipo)
+    // this.storage.get('jugando').then((valor) =>{
+
+    //   this.inicio = valor;
+    //   console.log('DADO GANADOR DE BORIS '+this.inicio);
+
+    // });
+    
   }
 
    validar_fondo(fondo){
@@ -39,7 +46,7 @@ export class LanzarDadoPage implements OnInit {
     //console.log(this.informacion);
     let rd = Math.floor(Math.random()*((5-1)+1))+1;
     console.log(rd);
-    this.router.navigate(['/dado',rd])
+    this.router.navigate(['/dado-posicion',rd])
     
   }
   //  muestra(){

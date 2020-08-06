@@ -42,7 +42,7 @@ export class OpcioncardPage implements OnInit {
     }
   }
   acerto(){
-    this.router.navigate(['/lanzar-dado'])
+    this.router.navigate(['/dado-ganador'])
   }
 
   async fallo(){

@@ -95,6 +95,20 @@ const routes: Routes = [
     path: 'ingreso-azul',
     loadChildren: () => import('./ingreso-azul/ingreso-azul.module').then( m => m.IngresoAzulPageModule)
   },
+  {
+    path: 'dado-ganador',
+    loadChildren: () => import('./dado-ganador/dado-ganador.module').then( m => m.DadoGanadorPageModule)
+  },
+  {
+    path: 'dado-posicion/:id',
+    loadChildren: () => import('./dado-posicion/dado-posicion.module').then( m => m.DadoPosicionPageModule)
+  },  {
+    path: 'pantalla-ganador',
+    loadChildren: () => import('./pantalla-ganador/pantalla-ganador.module').then( m => m.PantallaGanadorPageModule)
+  },
+
+
+
 ];
 
 @NgModule({

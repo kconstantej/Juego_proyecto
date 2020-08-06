@@ -34,29 +34,33 @@ export class DadoPage implements OnInit {
       localStorage.setItem('fondo',this.imagen_base);
       console.log("casaaaaaaaaaaaa",this.imagen_base);
     }else{
-      this.imagen_base=localStorage.getItem('fondo');  
+      this.imagen_base=localStorage.getItem('fondo');
+    
+      
     }
+ 
+    
   }
 
   ngOnInit() {
     this.arg=this.activateRoute.snapshot.paramMap.get('id');
-    if(this.arg==1){
+    if(this.arg==2){
       this.imagen='./assets/img/Amarillo.png';
       this.color='Amarillo';
       this.enlace='/anagrama';
-    }if(this.arg==2){
+    }if(this.arg==3){
       this.imagen='./assets/img/Azul.png';
       this.color='Azul';
       this.enlace='/dibujocard';
-    }if(this.arg==3){
+    }if(this.arg==5){
       this.imagen='./assets/img/Morado.png';
       this.color='Morado';
       this.enlace='/morada'
-    }if(this.arg==4){
+    }if(this.arg==1){
       this.imagen='./assets/img/Rojo.png';
       this.color='Rojo';
       this.enlace='/opcioncard';
-    }if(this.arg==5){
+    }if(this.arg==4){
       this.imagen='./assets/img/Verde.png';
       this.color='Verde';
       this.enlace='/actuacard';

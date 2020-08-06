@@ -8,7 +8,6 @@ import { Storage } from '@ionic/storage';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import {  Camera , CameraOptions } from '@ionic-native/camera/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
-
 @Component({
   selector: 'app-anagrama',
   templateUrl: './anagrama.page.html',
@@ -24,9 +23,6 @@ export class AnagramaPage implements OnInit {
   ans: string;
   cambio;
   equipos;
-  imagen:string;
-  imagecom:string;
-  message:string;
   constructor(private datalocal: DataLocalService, private toastCtrl :ToastController,private router: Router, private storage: Storage,private camera:Camera,private webview: WebView,private socialSharing: SocialSharing) { }
 
   async presentarT(mensaje:string){
@@ -72,7 +68,7 @@ export class AnagramaPage implements OnInit {
      });
   }
   acerto(){
-    this.router.navigate(['/lanzar-dado'])
+    this.router.navigate(['/dado-ganador'])
   }
 
   async fallo(){
@@ -98,6 +94,7 @@ export class AnagramaPage implements OnInit {
     });
     
     this.router.navigate(['/lanzar-dado']);
+
   }
 
 }

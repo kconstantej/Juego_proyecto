@@ -11,10 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { ComponentsModule } from './components/components.module';
+
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
 import { Camera } from '@ionic-native/camera/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
-
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,8 +24,10 @@ import { WebView } from '@ionic-native/ionic-webview/ngx';
   providers: [
     StatusBar,
     SplashScreen,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    InAppBrowser,    StatusBar,
+    SplashScreen,
     Camera,SocialSharing,WebView,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })
