@@ -27,7 +27,7 @@ export class ActuacardPage implements OnInit {
   }
 
   async carga(){
-    await this.datalocal.getCardsColor('Azules')
+    await this.datalocal.getCardsColor('Verdes')
     .then( resp => {
       console.log(resp);
       const randomNum = Math.trunc(Math.random() * (resp.length - 0) + 0);

@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { ComponentsModule } from './components/components.module';
+import { Camera } from '@ionic-native/camera/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
 
 
 @NgModule({
@@ -20,6 +23,7 @@ import { ComponentsModule } from './components/components.module';
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,SocialSharing,WebView,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

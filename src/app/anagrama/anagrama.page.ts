@@ -88,7 +88,6 @@ export class AnagramaPage implements OnInit {
     });
     
     this.router.navigate(['/lanzar-dado']);
-
   }
   async cambiar(equipo:any){
     await this.storage.set('jugando', equipo);

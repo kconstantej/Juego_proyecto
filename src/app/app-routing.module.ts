@@ -70,7 +70,8 @@ const routes: Routes = [
   {
     path: 'actuacard',
     loadChildren: () => import('./actuacard/actuacard.module').then( m => m.ActuacardPageModule)
-  },  {
+  },
+  {
     path: 'anagrama',
     loadChildren: () => import('./anagrama/anagrama.module').then( m => m.AnagramaPageModule)
   },
@@ -94,8 +95,6 @@ const routes: Routes = [
     path: 'ingreso-azul',
     loadChildren: () => import('./ingreso-azul/ingreso-azul.module').then( m => m.IngresoAzulPageModule)
   },
-
-
 ];
 
 @NgModule({
