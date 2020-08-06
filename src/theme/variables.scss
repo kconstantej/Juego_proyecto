@@ -101,7 +101,13 @@
   --ion-color-whatsapp-contrast-rgb: 0, 0, 0;
   --ion-color-whatsapp-shade: #00e021;
   --ion-color-whatsapp-tint: #1aff3c;
-
+    /* instagram */
+  --ion-color-instagram: #ff3888;
+  --ion-color-instagram-rgb: 255,56,136;
+  --ion-color-instagram-contrast: #ffffff;
+  --ion-color-instagram-contrast-rgb: 255,255,255;
+  --ion-color-instagram-shade: #e03178;
+  --ion-color-instagram-tint: #e838ff;
 
   --ion-color-yellow: #ffff00;
   --ion-color-yellow-rgb: 255,255,0;
@@ -118,7 +124,30 @@
   --ion-color-red-shade: #dd0000;
   --ion-color-red-tint: #fb1a1a;
 }
-
+.ion-color-whatsapp {
+  --ion-color-base: var(--ion-color-whatsapp) !important;
+  --ion-color-base-rgb: var(--ion-color-whatsapp-rgb) !important;
+  --ion-color-contrast: var(--ion-color-whatsapp-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-whatsapp-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-whatsapp-shade) !important;
+  --ion-color-tint: var(--ion-color-whatsapp-tint) !important;
+}
+.ion-color-facebook {
+  --ion-color-base: var(--ion-color-facebook) !important;
+  --ion-color-base-rgb: var(--ion-color-facebook-rgb) !important;
+  --ion-color-contrast: var(--ion-color-facebook-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-facebook-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-facebook-shade) !important;
+  --ion-color-tint: var(--ion-color-facebook-tint) !important;
+}
+.ion-color-instagram {
+  --ion-color-base: var(--ion-color-instagram) !important;
+  --ion-color-base-rgb: var(--ion-color-instagram-rgb) !important;
+  --ion-color-contrast: var(--ion-color-instagram-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-instagram-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-instagram-shade) !important;
+  --ion-color-tint: var(--ion-color-instagram-tint) !important;
+}
 @media (prefers-color-scheme: dark) {
   /*
    * Dark Colors
@@ -239,14 +268,7 @@
   --ion-color-shade: var(--ion-color-yellow-shade) !important;
   --ion-color-tint: var(--ion-color-yellow-tint) !important;
 }
-.ion-color-whatsapp {
-  --ion-color-base: var(--ion-color-whatsapp) !important;
-  --ion-color-base-rgb: var(--ion-color-whatsapp-rgb) !important;
-  --ion-color-contrast: var(--ion-color-whatsapp-contrast) !important;
-  --ion-color-contrast-rgb: var(--ion-color-whatsapp-contrast-rgb) !important;
-  --ion-color-shade: var(--ion-color-whatsapp-shade) !important;
-  --ion-color-tint: var(--ion-color-whatsapp-tint) !important;
-}
+
   .ios body {
     --ion-background-color: #000000;
     --ion-background-color-rgb: 0,0,0;
@@ -281,14 +303,7 @@
     --ion-card-background: #1c1c1d;
   }
 
-  .ion-color-facebook {
-    --ion-color-base: var(--ion-color-facebook) !important;
-    --ion-color-base-rgb: var(--ion-color-facebook-rgb) !important;
-    --ion-color-contrast: var(--ion-color-facebook-contrast) !important;
-    --ion-color-contrast-rgb: var(--ion-color-facebook-contrast-rgb) !important;
-    --ion-color-shade: var(--ion-color-facebook-shade) !important;
-    --ion-color-tint: var(--ion-color-facebook-tint) !important;
-}
+
   /*
    * Material Design Dark Theme
    * -------------------------------------------

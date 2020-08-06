@@ -1,9 +1,19 @@
 <ion-card>
   <ion-card-content>
-    <button color="danger" (click)="tomarfoto()"> Tomar foto
-      <ion-icon name="camera"></ion-icon>
-    </button>
-    <img *ngIf="imagen" [src]="imagen" ><br>
-    <ion-button (click)="whasp()">Compartir ssImagsfen</ion-button>
+    <ion-button color="dark" (click)="tomarfoto()" shape="round">Tomar foto
+      <br><ion-icon name="camera"></ion-icon>
+    </ion-button>
+    <img src="{{imagen}}"/>
   </ion-card-content>
 </ion-card>
+<ion-fab slot="fixed" horizontal="end">
+  <ion-fab-button color="secondary">
+    <ion-icon name="share"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="start">
+    <ion-fab-button color="facebook"(click)="compartirFacebook()"> <ion-icon  name="logo-facebook"></ion-icon></ion-fab-button>
+    <ion-fab-button color="whatsapp" (click)="compartirWhatsapp()"> <ion-icon  name="logo-whatsapp"></ion-icon></ion-fab-button>
+    <ion-fab-button color="instagram"(click)="compartirInstagram()"> <ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+
+  </ion-fab-list>
+</ion-fab>

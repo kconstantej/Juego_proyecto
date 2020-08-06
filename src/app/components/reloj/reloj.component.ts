@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Storage } from '@ionic/storage';
 import { Router } from '@angular/router';
+import { DataLocalService } from '../../services/data-local.service';
 @Component({
   selector: 'app-reloj',
   templateUrl: './reloj.component.html',
@@ -12,15 +13,19 @@ export class RelojComponent implements OnInit {
   cambio;
   equipos;
   time :BehaviorSubject<string>=new BehaviorSubject('00:00');
-  iniciaren =1 ;
-  constructor(private storage: Storage,private router: Router) {
+  intervalo;
+  constructor(private storage: Storage,private router: Router,private datalocal: DataLocalService) {
    }
    async iniciar(duracion:number){
-   
+   clearInterval(this.intervalo)
     this.timer=duracion*60;
-    setInterval(()=>{
+    this.intervalo=setInterval(()=>{
       this.actualizartiempo();
     },1000);
+  }
+  detenertiempo(){
+    clearInterval(this.intervalo);
+    this.time.next('00:00')
   }
   public disabled = false;
   public action() {
@@ -34,13 +39,13 @@ export class RelojComponent implements OnInit {
     await this.storage.get('jugando').then(otro=>{
 
       if(this.equipos[0].equipo===otro){
+        this.datalocal.cambiar(this.equipos[1].equipo);
         // this.storage.set('jugando', this.equipos[1]);
-        this.cambiar(this.equipos[1].equipo);
         // this.cambio=this.equipos[1].equipo;
       }if(this.equipos[1].equipo===otro){
         // this.storage.set('jugando', this.equipos[0]);
         // // this.cambio=this.equipos[0].equipo;
-        this.cambiar(this.equipos[0].equipo);
+        this.datalocal.cambiar(this.equipos[0].equipo);
 
       }
       console.log(this.equipos[0].equipo, '=', otro);
@@ -49,6 +54,7 @@ export class RelojComponent implements OnInit {
     });
     
     this.router.navigate(['/lanzar-dado']);
+
   }
   async cambiar(equipo:any){
     await this.storage.set('jugando', equipo);
@@ -64,7 +70,9 @@ export class RelojComponent implements OnInit {
     this.time.next(text);
     --this.timer;
     if(this.timer<0){
+      this.detenertiempo()
       console.log(this.timer);
+      this.fallo()
     }
   }
   

@@ -5,6 +5,10 @@ import { timer } from 'rxjs';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import {  Camera , CameraOptions } from '@ionic-native/camera/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+
 @Component({
   selector: 'app-anagrama',
   templateUrl: './anagrama.page.html',
@@ -20,7 +24,10 @@ export class AnagramaPage implements OnInit {
   ans: string;
   cambio;
   equipos;
-  constructor(private datalocal: DataLocalService, private toastCtrl :ToastController,private router: Router, private storage: Storage) { }
+  imagen:string;
+  imagecom:string;
+  message:string;
+  constructor(private datalocal: DataLocalService, private toastCtrl :ToastController,private router: Router, private storage: Storage,private camera:Camera,private webview: WebView,private socialSharing: SocialSharing) { }
 
   async presentarT(mensaje:string){
     const toast=await  this.toastCtrl.create({
