@@ -10,16 +10,17 @@ export class LanzarDadoPage implements OnInit {
   temas={
     imagen_fondo: ''
   };
-  equipo;
+
   imagen_base:string;
   constructor( private router: Router, private storage: Storage) {
     this.validar_fondo(localStorage.getItem('fondo'))
     this.imagen_base= localStorage.getItem('fondo');
     console.log('home',this.imagen_base);
-    this.muestra();
+    //this.muestra();
    }
    ngOnInit() {
-    this.muestra();
+    const equipo = this.storage.get('jugando');
+    console.log(equipo)
   }
 
    validar_fondo(fondo){
@@ -41,13 +42,13 @@ export class LanzarDadoPage implements OnInit {
     this.router.navigate(['/dado',rd])
     
   }
-   muestra(){
-    console.log('entro en muestra');
-     this.storage.get('jugando').then(recv=>{
-      this.equipo=recv;
-      console.log('muestra',this.equipo);
-    });
-  }
+  //  muestra(){
+  //   console.log('entro en muestra');
+  //    this.storage.get('jugando').then(recv=>{
+  //     this.equipo=recv;
+  //     console.log('muestra',this.equipo);
+  //   });
+  // }
 
 
 }

@@ -21,6 +21,7 @@ export class AnagramaPage implements OnInit {
   cambio;
   equipos;
   constructor(private datalocal: DataLocalService, private toastCtrl :ToastController,private router: Router, private storage: Storage) { }
+
   async presentarT(mensaje:string){
     const toast=await  this.toastCtrl.create({
       message:mensaje,
@@ -28,6 +29,8 @@ export class AnagramaPage implements OnInit {
     });
     toast.present();
   }
+  
+  
   ngOnInit() {
     this.amarillo();
   }
@@ -73,13 +76,13 @@ export class AnagramaPage implements OnInit {
     await this.storage.get('jugando').then(otro=>{
 
       if(this.equipos[0].equipo===otro){
+        this.datalocal.cambiar(this.equipos[1].equipo);
         // this.storage.set('jugando', this.equipos[1]);
-        this.cambiar(this.equipos[1].equipo);
         // this.cambio=this.equipos[1].equipo;
       }if(this.equipos[1].equipo===otro){
         // this.storage.set('jugando', this.equipos[0]);
         // // this.cambio=this.equipos[0].equipo;
-        this.cambiar(this.equipos[0].equipo);
+        this.datalocal.cambiar(this.equipos[0].equipo);
 
       }
       console.log(this.equipos[0].equipo, '=', otro);
@@ -89,10 +92,6 @@ export class AnagramaPage implements OnInit {
     
     this.router.navigate(['/lanzar-dado']);
   }
-  async cambiar(equipo:any){
-    await this.storage.set('jugando', equipo);
-    console.log('cambiar',equipo);
-  }
-
 
 }
+

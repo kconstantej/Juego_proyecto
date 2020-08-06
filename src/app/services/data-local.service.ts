@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { CardsDBService } from './cards-db.service';
 import { Rojo, Verde, Amarillo } from '../interfaces/interfaces';
+import { AlertController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class DataLocalService {
   cardsY: Amarillo [] = [];
 
 
-  constructor( private storage: Storage, private cardsdb: CardsDBService ) { }
+  constructor( public alertController: AlertController, private storage: Storage, private cardsdb: CardsDBService ) { }
 
 
   async firstTime(){
@@ -67,5 +68,24 @@ export class DataLocalService {
       equipo: equipo
     };
     return await this.storage.set('jugando', this.juega);
+  }
+
+
+
+  async cambiar(equipo:any){
+    await this.storage.set('jugando', equipo);
+    this.presentAlertMultipleButtons(equipo);
+  }
+
+  async presentAlertMultipleButtons(equipo) {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Fallaste',
+      subHeader: 'CONTINUA EL EQUIPO :',
+      message: `<h1> ${equipo}</h1> `,
+      buttons: ['Ok']
+    });
+
+    await alert.present();
   }
 }
