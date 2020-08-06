@@ -1,4 +1,4 @@
-<ion-content class="ion-text-center">
+<ion-content class="ion-text-center" [class]="imagen_base">
 
   <ion-card class="ion-padding">
     <ion-text>
@@ -12,6 +12,7 @@
     <ion-button (click)="muestra()">
       Pista
     </ion-button>
+
   </ion-card>
   <div id="oculto">
     {{ ans }}

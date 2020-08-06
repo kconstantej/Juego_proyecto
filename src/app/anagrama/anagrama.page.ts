@@ -23,7 +23,17 @@ export class AnagramaPage implements OnInit {
   ans: string;
   cambio;
   equipos;
-  constructor(private datalocal: DataLocalService, private toastCtrl :ToastController,private router: Router, private storage: Storage,private camera:Camera,private webview: WebView,private socialSharing: SocialSharing) { }
+  temas={
+    imagen_fondo: '',
+   
+  };
+  
+  imagen_base:string;
+  constructor(private datalocal: DataLocalService, private toastCtrl :ToastController,private router: Router, private storage: Storage,private camera:Camera,private webview: WebView,private socialSharing: SocialSharing) { 
+
+    this.validar_fondo(localStorage.getItem('fondo'))
+    this.imagen_base= localStorage.getItem('fondo');
+  }
 
   async presentarT(mensaje:string){
     const toast=await  this.toastCtrl.create({
@@ -48,6 +58,19 @@ export class AnagramaPage implements OnInit {
       this.pista = this.azarCard.pista;
       this.ans = this.azarCard.correct;
     });
+  }
+
+  validar_fondo(fondo){
+    if(fondo===''){
+      this.imagen_base= 'backgroundClaro';
+      localStorage.setItem('fondo',this.imagen_base);
+      this.storage.set('temporizador', 1);
+      console.log("casaaaaaaaaaaaa",this.imagen_base);
+    }else{
+      this.imagen_base=localStorage.getItem('fondo');
+    
+      
+    }
   }
 
   answer(){

@@ -69,7 +69,7 @@ export class RelojComponent implements OnInit {
     const text=minutos+":"+segundos;
     this.time.next(text);
     --this.timer;
-    if(this.timer<0){
+    if(this.timer<=0){
       this.detenertiempo()
       console.log(this.timer);
       this.fallo()

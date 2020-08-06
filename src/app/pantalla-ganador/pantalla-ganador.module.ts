@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { PantallaGanadorPageRoutingModule } from './pantalla-ganador-routing.module';
 
 import { PantallaGanadorPage } from './pantalla-ganador.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PantallaGanadorPageRoutingModule
+    PantallaGanadorPageRoutingModule,ComponentsModule
   ],
   declarations: [PantallaGanadorPage]
 })

@@ -20,7 +20,17 @@ export class DibujocardPage implements OnInit {
   cambio;
   equipos;
 
-  constructor(private datalocal: DataLocalService, private router: Router, private storage: Storage ) { }
+  temas={
+    imagen_fondo: '',
+   
+  };
+  
+  imagen_base:string;
+
+  constructor(private datalocal: DataLocalService, private router: Router, private storage: Storage ) { 
+    this.validar_fondo(localStorage.getItem('fondo'))
+    this.imagen_base= localStorage.getItem('fondo');
+  }
 
   ngOnInit() {
    this.carga();
@@ -41,6 +51,21 @@ export class DibujocardPage implements OnInit {
       document.getElementById('oculto').style.display = "none";
      });
   }
+
+
+  validar_fondo(fondo){
+    if(fondo===''){
+      this.imagen_base= 'backgroundClaro';
+      localStorage.setItem('fondo',this.imagen_base);
+      this.storage.set('temporizador', 1);
+      console.log("casaaaaaaaaaaaa",this.imagen_base);
+    }else{
+      this.imagen_base=localStorage.getItem('fondo');
+    
+      
+    }
+  }
+
 
   acerto(){
     this.router.navigate(['/dado-ganador'])

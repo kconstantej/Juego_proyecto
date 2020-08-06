@@ -25,6 +25,7 @@ export class HomePage {
     
     
   }
+  
   validar_fondo(fondo){
     if(fondo===''){
       this.imagen_base= 'backgroundClaro';
